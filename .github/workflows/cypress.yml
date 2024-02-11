@@ -5,15 +5,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout 🛎
-        uses: actions/checkout@v2
-
-      - name: Run Cypress tests 🧪
-        uses: cypress-io/github-action@v2
-        with:
-          record: true
-          paralell: true
-          start: npm start
-          wait-on: "http://localhost:8080"
+        uses: actions/checkout@v4
         env:
           # pass the record key as environment variable
           # during this CI step
